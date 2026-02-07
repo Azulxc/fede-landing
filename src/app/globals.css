@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-serif: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  --font-body: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #faf9f7;
+  color: #1c1917;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+::selection {
+  background-color: #292524;
+  color: #fafaf9;
+}
