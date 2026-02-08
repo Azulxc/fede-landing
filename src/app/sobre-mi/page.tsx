@@ -16,7 +16,7 @@ export default function SobreMi() {
         <p className="text-[0.6875rem] uppercase tracking-[0.2em] text-stone-500 mb-8">
           [ Sobre el autor ]
         </p>
-        <h1 className="text-[clamp(2.5rem,8vw,8rem)] font-black uppercase leading-[0.85] tracking-[-0.03em]">
+        <h1 className="text-[clamp(2.5rem,8vw,8rem)] font-medium uppercase leading-[0.85] tracking-[-0.02em]">
           Federico
           <br />
           Giobergia
@@ -24,7 +24,7 @@ export default function SobreMi() {
       </section>
 
       {/* Content */}
-      <section className="border-t border-black px-6 md:px-12 py-16 md:py-24">
+      <section className="px-6 md:px-12 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           {/* Photo - sticky on desktop */}
           <div className="md:col-span-5">
@@ -65,7 +65,7 @@ export default function SobreMi() {
               </p>
             </div>
 
-            <blockquote className="mt-12 pt-12 border-t border-stone-400">
+            <blockquote className="mt-12 pt-12 border-t border-stone-400/40">
               <p className="font-serif text-[clamp(1.25rem,2vw,1.75rem)] italic leading-[1.4]">
                 &ldquo;Escribo para entender lo que no puedo decir en voz alta.
                 Cada historia es un intento de ordenar el caos que llevamos
@@ -73,7 +73,7 @@ export default function SobreMi() {
               </p>
             </blockquote>
 
-            <div className="mt-12 pt-12 border-t border-stone-400 grid grid-cols-2 gap-8">
+            <div className="mt-12 pt-12 border-t border-stone-400/40 grid grid-cols-2 gap-8">
               <div>
                 <p className="text-[0.6875rem] uppercase tracking-[0.2em] text-stone-500 mb-2">
                   Género
@@ -93,7 +93,7 @@ export default function SobreMi() {
                 <p className="text-[0.9375rem]">
                   <Link
                     href="/libro"
-                    className="underline underline-offset-4 decoration-stone-400 hover:decoration-black transition-colors"
+                    className="underline underline-offset-4 decoration-stone-400 hover:decoration-[#1a1a1a] transition-colors"
                   >
                     Los muertos que contamos
                   </Link>
@@ -106,7 +106,7 @@ export default function SobreMi() {
                 <p className="text-[0.9375rem]">
                   <a
                     href="#"
-                    className="underline underline-offset-4 decoration-stone-400 hover:decoration-black transition-colors"
+                    className="underline underline-offset-4 decoration-stone-400 hover:decoration-[#1a1a1a] transition-colors"
                   >
                     hola@federicogiobergia.com
                   </a>

@@ -18,12 +18,12 @@ export default function Libro() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-end">
           <div className="md:col-span-2">
-            <span className="text-[clamp(3rem,7vw,7rem)] font-black leading-none tracking-tight">
+            <span className="text-[clamp(3rem,7vw,7rem)] font-light leading-none tracking-tight text-stone-400">
               01
             </span>
           </div>
           <div className="md:col-span-10">
-            <h1 className="text-[clamp(2.5rem,8vw,9rem)] font-black uppercase leading-[0.85] tracking-[-0.03em]">
+            <h1 className="text-[clamp(2.5rem,8vw,9rem)] font-medium uppercase leading-[0.85] tracking-[-0.02em]">
               Los muertos
               <br />
               que contamos
@@ -32,24 +32,51 @@ export default function Libro() {
         </div>
       </section>
 
-      {/* Full-width image */}
-      <section className="px-6 md:px-12">
-        <div className="relative aspect-[2.5/1] bg-stone-300 overflow-hidden">
-          <Image
-            src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=1400&h=600&fit=crop"
-            alt="Los muertos que contamos"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
+      {/* Book cover + image row */}
+      <section className="px-6 md:px-12 pb-20 md:pb-32">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
+          {/* CSS Book Cover */}
+          <div className="md:col-span-4 flex justify-center">
+            <div className="relative w-56 md:w-64 aspect-[2/3] bg-[#1a1a1a] shadow-2xl overflow-hidden">
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
+                <div className="w-12 h-px bg-stone-500 mb-6" />
+                <p className="text-stone-400 text-[0.6875rem] tracking-[0.3em] uppercase mb-4">
+                  Federico Giobergia
+                </p>
+                <h3 className="font-serif text-[1.625rem] text-white leading-snug italic">
+                  Los muertos
+                  <br />
+                  que contamos
+                </h3>
+                <div className="w-12 h-px bg-stone-500 mt-6" />
+                <p className="text-stone-500 text-[0.625rem] tracking-[0.2em] uppercase mt-6">
+                  Novela
+                </p>
+              </div>
+              <div className="absolute left-0 top-0 bottom-0 w-2 bg-[#111]" />
+            </div>
+          </div>
+
+          {/* Atmospheric image */}
+          <div className="md:col-span-8">
+            <div className="relative aspect-[16/10] bg-stone-300 overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=1200&h=750&fit=crop"
+                alt="Los muertos que contamos"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 66vw"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Synopsis */}
-      <section className="border-t border-black px-6 md:px-12 py-16 md:py-24 mt-16">
+      <section className="px-6 md:px-12 py-20 md:py-32">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           <div className="md:col-span-3">
-            <p className="text-[clamp(1.5rem,3vw,2.5rem)] font-black leading-[1.1] tracking-tight">
+            <p className="text-[clamp(1.5rem,3vw,2.5rem)] font-medium leading-[1.1] tracking-tight">
               Primer
               <br />
               semestre,
@@ -101,7 +128,7 @@ export default function Libro() {
                 <p>Por confirmar</p>
               </div>
               <div className="mt-2">
-                <button className="text-[0.8125rem] underline underline-offset-4 decoration-stone-400 font-medium hover:decoration-black transition-colors cursor-pointer">
+                <button className="text-[0.8125rem] underline underline-offset-4 decoration-stone-400 font-medium hover:decoration-[#1a1a1a] transition-colors cursor-pointer">
                   Pre-ordenar &rarr;
                 </button>
               </div>
@@ -111,7 +138,7 @@ export default function Libro() {
       </section>
 
       {/* Excerpt */}
-      <section className="border-t border-black px-6 md:px-12 py-16 md:py-24">
+      <section className="px-6 md:px-12 py-20 md:py-32">
         <p className="text-[0.6875rem] uppercase tracking-[0.2em] text-stone-500 mb-12 md:mb-16">
           [ Extracto — Capítulo 1 ]
         </p>
@@ -124,8 +151,8 @@ export default function Libro() {
         </blockquote>
       </section>
 
-      {/* Second image */}
-      <section className="px-6 md:px-12">
+      {/* Image grid */}
+      <section className="px-6 md:px-12 pb-20 md:pb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           <div className="relative aspect-[4/3] bg-stone-300 overflow-hidden">
             <Image
@@ -149,12 +176,12 @@ export default function Libro() {
       </section>
 
       {/* Newsletter */}
-      <section className="border-t border-black px-6 md:px-12 py-16 md:py-24 mt-16">
+      <section className="px-6 md:px-12 py-20 md:py-32">
         <p className="text-[0.6875rem] uppercase tracking-[0.2em] text-stone-500 mb-12 md:mb-16">
           [ Newsletter ]
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-          <h2 className="text-[clamp(2rem,4.5vw,4.5rem)] font-black uppercase leading-[0.85] tracking-[-0.02em]">
+          <h2 className="text-[clamp(2rem,4.5vw,4.5rem)] font-medium uppercase leading-[0.85] tracking-[-0.02em]">
             No te pierdas
             <br />
             el lanzamiento
