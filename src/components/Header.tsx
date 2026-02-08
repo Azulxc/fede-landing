@@ -2,131 +2,77 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
-const links = [
-  { href: "/", label: "Inicio" },
-  { href: "/sobre-mi", label: "Sobre mí" },
-  { href: "/libro", label: "El libro" },
+const navLinks = [
+  { href: "/#inicio", label: "Inicio" },
+  { href: "/#sobre-mi", label: "Sobre mí" },
+  { href: "/#libro", label: "El libro" },
+  { href: "/#newsletter", label: "Newsletter" },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 bg-[#faf9f7]/90 backdrop-blur-md border-b border-stone-200">
-      <nav className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link
-          href="/"
-          className="font-serif text-xl tracking-tight text-stone-900 hover:text-stone-700 transition-colors"
-        >
-          Federico Giobergia
-        </Link>
+    <>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#ece8e1]/90 backdrop-blur-sm">
+        <div className="flex items-center justify-between px-6 md:px-12 py-4 border-b border-black/10">
+          <Link
+            href="/"
+            className="text-[0.6875rem] uppercase tracking-[0.15em] font-medium"
+          >
+            Federico Giobergia
+          </Link>
 
-        {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-8">
-          {links.map(({ href, label }) => (
-            <li key={href}>
+          <div className="hidden md:flex items-center gap-12">
+            <span className="text-[0.6875rem] uppercase tracking-[0.15em] text-stone-500">
+              Escritor
+            </span>
+            <span className="text-[0.6875rem] uppercase tracking-[0.15em] text-stone-500">
+              Bs. As., Argentina
+            </span>
+          </div>
+
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-[0.6875rem] uppercase tracking-[0.15em] font-medium hover:text-stone-600 transition-colors cursor-pointer"
+          >
+            {menuOpen ? "Cerrar" : "Menú"}
+          </button>
+        </div>
+      </header>
+
+      {/* Full-screen menu overlay */}
+      {menuOpen && (
+        <div className="fixed inset-0 z-40 bg-[#1a1a1a] flex flex-col justify-center px-6 md:px-12 pt-16">
+          <nav className="flex flex-col gap-3 md:gap-4">
+            {navLinks.map(({ href, label }) => (
               <Link
+                key={href}
                 href={href}
-                className={`text-sm tracking-wide transition-colors ${
-                  pathname === href
-                    ? "text-stone-900 font-medium"
-                    : "text-stone-500 hover:text-stone-900"
-                }`}
+                onClick={() => setMenuOpen(false)}
+                className="text-[clamp(2.5rem,7vw,5.5rem)] font-black uppercase text-white hover:text-stone-400 transition-colors leading-[0.9]"
               >
                 {label}
               </Link>
-            </li>
-          ))}
-        </ul>
-
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden p-2"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menú"
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            className="text-stone-900"
-          >
-            {menuOpen ? (
-              <>
-                <line
-                  x1="4"
-                  y1="4"
-                  x2="16"
-                  y2="16"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-                <line
-                  x1="16"
-                  y1="4"
-                  x2="4"
-                  y2="16"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-              </>
-            ) : (
-              <>
-                <line
-                  x1="3"
-                  y1="5"
-                  x2="17"
-                  y2="5"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-                <line
-                  x1="3"
-                  y1="10"
-                  x2="17"
-                  y2="10"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-                <line
-                  x1="3"
-                  y1="15"
-                  x2="17"
-                  y2="15"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-              </>
-            )}
-          </svg>
-        </button>
-      </nav>
-
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div className="md:hidden border-t border-stone-200 bg-[#faf9f7]">
-          <ul className="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-4">
-            {links.map(({ href, label }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  onClick={() => setMenuOpen(false)}
-                  className={`text-sm tracking-wide transition-colors ${
-                    pathname === href
-                      ? "text-stone-900 font-medium"
-                      : "text-stone-500 hover:text-stone-900"
-                  }`}
-                >
-                  {label}
-                </Link>
-              </li>
             ))}
-          </ul>
+          </nav>
+          <div className="absolute bottom-8 left-6 md:left-12 right-6 md:right-12 flex justify-between text-[0.6875rem] uppercase tracking-[0.15em] text-stone-500">
+            <span>Federico Giobergia &copy; 2026</span>
+            <div className="flex gap-6">
+              <a href="#" className="hover:text-white transition-colors">
+                IG
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                TW
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                GR
+              </a>
+            </div>
+          </div>
         </div>
       )}
-    </header>
+    </>
   );
 }
