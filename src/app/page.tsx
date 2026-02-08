@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import Newsletter from "@/components/Newsletter";
 
@@ -46,66 +45,6 @@ export default function Home() {
           <span className="hidden sm:inline">IG, TW, GR</span>
           <span>Scroll &darr;</span>
           <span>&copy;2026</span>
-        </div>
-      </section>
-
-      {/* ═══ ABOUT ═══ */}
-      <section
-        id="sobre-mi"
-        className="scroll-mt-14 px-6 md:px-12 py-20 md:py-32"
-      >
-        <p className="text-[0.6875rem] uppercase tracking-[0.2em] text-stone-500 mb-12 md:mb-16">
-          [ Sobre el autor ]
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
-          <div className="md:col-span-4">
-            <div className="relative aspect-[3/4] bg-stone-300 overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=800&fit=crop&crop=face"
-                alt="Federico Giobergia"
-                fill
-                className="object-cover grayscale"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-            </div>
-          </div>
-
-          <div className="md:col-span-4">
-            <p className="text-[0.9375rem] leading-relaxed text-stone-700">
-              Federico Giobergia nació en Buenos Aires, Argentina. Desde joven
-              encontró en la escritura una forma de explorar las complejidades
-              de la condición humana, los vínculos familiares y los fantasmas
-              que habitan la memoria colectiva.
-            </p>
-            <p className="mt-4 text-[0.9375rem] leading-relaxed text-stone-700">
-              Su obra se caracteriza por una prosa intimista y una mirada aguda
-              sobre lo cotidiano, donde lo extraordinario se esconde en los
-              detalles más simples.
-            </p>
-          </div>
-
-          <div className="md:col-span-4">
-            <p className="text-[0.9375rem] leading-relaxed text-stone-700">
-              Influenciado por autores como Julio Cortázar, Samanta Schweblin y
-              Juan José Saer, su escritura transita entre lo real y lo
-              fantástico con una voz propia que explora los bordes de lo
-              cotidiano.
-            </p>
-            <div className="mt-8 pt-8 border-t border-stone-400/40">
-              <p className="text-[0.6875rem] uppercase tracking-[0.2em] text-stone-500 mb-2">
-                Contacto
-              </p>
-              <p className="text-[0.9375rem]">
-                <Link
-                  href="/#newsletter"
-                  className="underline underline-offset-4 decoration-stone-400 hover:decoration-[#1a1a1a] transition-colors"
-                >
-                  Escribime
-                </Link>
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
