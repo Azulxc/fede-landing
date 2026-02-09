@@ -5,19 +5,19 @@ export default function Footer() {
         <span>Federico Giobergia &copy; 2026</span>
         <div className="flex gap-6">
           <a
-            href="#"
+            href="https://www.instagram.com/fedegiobergia"
             className="hover:text-[#1a1a1a] transition-colors"
           >
             Instagram
           </a>
           <a
-            href="#"
+            href="https://x.com/FedeGiobergia"
             className="hover:text-[#1a1a1a] transition-colors"
           >
             Twitter
           </a>
           <a
-            href="#"
+            href="https://www.goodreads.com/user/show/103484077-fede-giobergia"
             className="hover:text-[#1a1a1a] transition-colors"
           >
             Goodreads

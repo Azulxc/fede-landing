@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Newsletter from "@/components/Newsletter";
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: "Los muertos que contamos — Federico Giobergia",
@@ -50,7 +51,7 @@ export default function Libro() {
                 </h3>
                 <div className="w-12 h-px bg-stone-500 mt-6" />
                 <p className="text-stone-500 text-[0.625rem] tracking-[0.2em] uppercase mt-6">
-                  Novela
+                  Cuentos
                 </p>
               </div>
               <div className="absolute left-0 top-0 bottom-0 w-2 bg-[#111]" />
@@ -58,17 +59,6 @@ export default function Libro() {
           </div>
 
           {/* Atmospheric image */}
-          <div className="md:col-span-8">
-            <div className="relative aspect-[16/10] bg-stone-300 overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=1200&h=750&fit=crop"
-                alt="Los muertos que contamos"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 66vw"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -91,18 +81,10 @@ export default function Libro() {
             </p>
             <div className="space-y-4 text-[0.9375rem] leading-relaxed text-stone-700">
               <p>
-                En un pueblo donde los muertos pesan más que los vivos, Martín
-                regresa después de veinte años para enfrentarse a la historia
-                que su familia eligió callar. Pero los secretos enterrados
-                tienen la costumbre de abrirse paso entre la tierra, y las voces
-                de los que ya no están empiezan a contar su propia versión de
-                los hechos.
-              </p>
-              <p>
-                <em>Los muertos que contamos</em> es una novela sobre la
-                memoria, la culpa y los lazos invisibles que nos atan a quienes
-                creímos haber perdido. Una historia donde recordar es un acto de
-                valentía y olvidar, la peor de las traiciones.
+                <em>Los muertos que contamos</em> es una antología de relatos sobre 
+                la memoria, la culpa y los lazos invisibles que nos atan a quienes
+                creímos haber perdido. Explora el paso de lo extraño y lo paranormal 
+                dentro de la cotidianeidad.
               </p>
             </div>
           </div>
@@ -119,19 +101,22 @@ export default function Libro() {
                 <p className="text-[0.6875rem] uppercase tracking-[0.15em] text-stone-500 mb-1">
                   Formato
                 </p>
-                <p>Novela</p>
+                <p>Antología</p>
               </div>
               <div>
                 <p className="text-[0.6875rem] uppercase tracking-[0.15em] text-stone-500 mb-1">
                   Editorial
                 </p>
-                <p>Por confirmar</p>
+                <p>Orsai</p>
               </div>
-              <div className="mt-2">
-                <button className="text-[0.8125rem] underline underline-offset-4 decoration-stone-400 font-medium hover:decoration-[#1a1a1a] transition-colors cursor-pointer">
-                  Pre-ordenar &rarr;
-                </button>
-              </div>
+                <div className="mt-2">
+                  <Link 
+                    href="https://tienda.orsai.org/products/los-muertos-que-contamos" 
+                    className="text-[0.8125rem] underline underline-offset-4 decoration-stone-400 font-medium hover:decoration-[#1a1a1a] transition-colors cursor-pointer"
+                  >
+                    Pre-comprar &rarr;
+                  </Link>
+                </div>
             </div>
           </div>
         </div>
@@ -140,40 +125,19 @@ export default function Libro() {
       {/* Excerpt */}
       <section className="px-6 md:px-12 py-20 md:py-32">
         <p className="text-[0.6875rem] uppercase tracking-[0.2em] text-stone-500 mb-12 md:mb-16">
-          [ Extracto — Capítulo 1 ]
+          [ Extracto — El problema de Salomé ]
         </p>
         <blockquote className="font-serif text-[clamp(1.25rem,2.5vw,2.25rem)] italic leading-[1.4] max-w-5xl">
-          &ldquo;Los muertos no se van del todo. Se quedan en las esquinas de
-          las habitaciones, en el olor del café por la mañana, en las palabras
-          que decimos sin saber que las heredamos de ellos. Contarlos es la
-          única forma de dejarlos ir. Y sin embargo, cada vez que los contamos,
-          los hacemos volver.&rdquo;
+          &ldquo; Los momentos de imaginar cosas en ocasiones eran más intensos que otros. 
+          A veces solo imaginaba escenas extrañas, a veces escuchaba sonidos en distintas 
+          partes de la casa y a veces, en los momentos de mayor intensidad, veía sombras o 
+          bultos moverse por el rabillo del ojo. Pero desde hacía varios meses había aparecido 
+          algo nuevo en su repertorio de delirios de las 3 de la madrugada, había empezado
+           a tener pensamientos intrusivos.&rdquo;
         </blockquote>
       </section>
 
       {/* Image grid */}
-      <section className="px-6 md:px-12 pb-20 md:pb-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-          <div className="relative aspect-[4/3] bg-stone-300 overflow-hidden">
-            <Image
-              src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&h=600&fit=crop"
-              alt="Libros apilados"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-          <div className="relative aspect-[4/3] bg-stone-300 overflow-hidden">
-            <Image
-              src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=600&fit=crop"
-              alt="Escritura"
-              fill
-              className="object-cover grayscale"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-        </div>
-      </section>
 
       {/* Newsletter */}
       <section className="px-6 md:px-12 py-20 md:py-32">

@@ -29,7 +29,7 @@ export default function Header() {
               Escritor
             </span>
             <span className="text-[0.6875rem] uppercase tracking-[0.15em] text-stone-500">
-              Bs. As., Argentina
+              Santa Fe, Argentina
             </span>
           </div>
 
@@ -60,13 +60,13 @@ export default function Header() {
           <div className="absolute bottom-8 left-6 md:left-12 right-6 md:right-12 flex justify-between text-[0.6875rem] uppercase tracking-[0.15em] text-stone-500">
             <span>Federico Giobergia &copy; 2026</span>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="https://www.instagram.com/fedegiobergia" className="hover:text-white transition-colors">
                 IG
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="https://x.com/FedeGiobergia" className="hover:text-white transition-colors">
                 TW
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="https://www.goodreads.com/user/show/103484077-fede-giobergia" className="hover:text-white transition-colors">
                 GR
               </a>
             </div>

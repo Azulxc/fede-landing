@@ -20,8 +20,8 @@ export default function Home() {
               Giobergia
             </h1>
             <p className="mt-6 font-serif text-[clamp(1rem,2vw,1.375rem)] italic text-stone-500 max-w-xl mx-auto">
-              &ldquo;Las historias que merecen ser contadas viven en los
-              silencios entre las palabras&rdquo;
+              &ldquo;Escribo para entender lo que no puedo decir en voz alta. 
+              Cada historia es un intento de ordenar el caos que llevamos dentro.&rdquo;
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -91,10 +91,10 @@ export default function Home() {
               que contamos
             </h2>
             <p className="text-[0.9375rem] leading-relaxed text-stone-700 mb-4">
-              Una historia que explora los límites entre la memoria y el olvido,
-              donde los vivos cargan con las historias de quienes ya no están, y
-              descubren que contar a los muertos es la única forma de
-              mantenerlos vivos.
+                Una antología de relatos sobre 
+                la memoria, la culpa y los lazos invisibles que nos atan a quienes
+                creímos haber perdido. Explora el paso de lo extraño y lo paranormal 
+                dentro de la cotidianeidad.
             </p>
             <p className="font-serif text-[0.9375rem] italic text-stone-500 mb-8">
               &laquo;Hay muertos que pesan más que los vivos. No por su
@@ -113,14 +113,16 @@ export default function Home() {
       {/* ═══ EXCERPT ═══ */}
       <section className="px-6 md:px-12 py-20 md:py-32">
         <p className="text-[0.6875rem] uppercase tracking-[0.2em] text-stone-500 mb-12 md:mb-16">
-          [ Extracto — Capítulo 1 ]
+          [ Extracto — El problema de Salomé ]
         </p>
         <blockquote className="font-serif text-[clamp(1.25rem,2.5vw,2.25rem)] italic leading-[1.4] max-w-5xl">
-          &ldquo;Los muertos no se van del todo. Se quedan en las esquinas de
-          las habitaciones, en el olor del café por la mañana, en las palabras
-          que decimos sin saber que las heredamos de ellos. Contarlos es la
-          única forma de dejarlos ir. Y sin embargo, cada vez que los contamos,
-          los hacemos volver.&rdquo;
+          &ldquo;Los momentos de imaginar cosas en ocasiones eran más 
+          intensos que otros. A veces solo imaginaba escenas extrañas, 
+          a veces escuchaba sonidos en distintas partes de la casa y a 
+          veces, en los momentos de mayor intensidad, veía sombras o 
+          bultos moverse por el rabillo del ojo. Pero desde hacía varios 
+          meses había aparecido algo nuevo en su repertorio de delirios 
+          de las 3 de la madrugada, había empezado a tener pensamientos intrusivos.&rdquo;
         </blockquote>
       </section>
 

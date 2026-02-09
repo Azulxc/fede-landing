@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+
 export const metadata: Metadata = {
   title: "Sobre mí — Federico Giobergia",
   description:
@@ -31,11 +32,13 @@ export default function SobreMi() {
             <div className="md:sticky md:top-24">
               <div className="relative aspect-[3/4] bg-stone-300 overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=800&fit=crop&crop=face"
+                  src="/img180v2.jpg"
                   alt="Federico Giobergia"
                   fill
+                  priority={true}
+                  quality={100}
                   className="object-cover grayscale"
-                  sizes="(max-width: 768px) 100vw, 42vw"
+                  sizes="100vw"
                 />
               </div>
             </div>
@@ -45,23 +48,21 @@ export default function SobreMi() {
           <div className="md:col-span-6 md:col-start-7">
             <div className="space-y-6 text-[0.9375rem] leading-relaxed text-stone-700">
               <p>
-                Federico Giobergia nació en Buenos Aires, Argentina. Desde joven
-                encontró en la escritura una forma de explorar las complejidades
-                de la condición humana, los vínculos familiares y los fantasmas
-                que habitan la memoria colectiva.
+                Federico Giobergia nació en Santa Fe, Argentina. Desde joven 
+                encontró en la escritura una forma de explorar las complejidades 
+                de las tradiciones, los vínculos familiares, la muerte y los 
+                fantasmas que habitan la memoria colectiva.
               </p>
               <p>
-                Su obra se caracteriza por una prosa intimista y una mirada
-                aguda sobre lo cotidiano, donde lo extraordinario se esconde en
-                los detalles más simples. Influenciado por autores como Julio
-                Cortázar, Samanta Schweblin y Juan José Saer, su escritura
-                transita entre lo real y lo fantástico.
+               Su obra se caracteriza por una prosa íntima y una mirada aguda sobre lo 
+               cotidiano, donde lo extraordinario se esconde en los detalles más simples, 
+               buscando retratar lo extraño, lo fantástico y lo paranormal en el día a día.
               </p>
               <p>
-                Actualmente trabaja en su próximo libro,{" "}
-                <em>Los muertos que contamos</em>, una novela que explora los
-                límites entre la memoria y el olvido, entre lo que elegimos
-                recordar y lo que nos negamos a olvidar.
+                Su próximo libro, {" "}
+                <em>Los muertos que contamos</em>, 
+                reúne una colección de cuentos que exploran la memoria, 
+                el duelo, la culpa y las cosas que se niegan a morir.
               </p>
             </div>
 
@@ -78,17 +79,17 @@ export default function SobreMi() {
                 <p className="text-[0.6875rem] uppercase tracking-[0.2em] text-stone-500 mb-2">
                   Género
                 </p>
-                <p className="text-[0.9375rem]">Ficción contemporánea</p>
+                <p className="text-[0.9375rem]">Ficción | Paranormal</p>
               </div>
               <div>
                 <p className="text-[0.6875rem] uppercase tracking-[0.2em] text-stone-500 mb-2">
                   Ubicación
                 </p>
-                <p className="text-[0.9375rem]">Buenos Aires, Argentina</p>
+                <p className="text-[0.9375rem]">Santa Fe, Argentina</p>
               </div>
               <div>
                 <p className="text-[0.6875rem] uppercase tracking-[0.2em] text-stone-500 mb-2">
-                  Próximo libro
+                  Último libro
                 </p>
                 <p className="text-[0.9375rem]">
                   <Link
@@ -108,7 +109,7 @@ export default function SobreMi() {
                     href="#"
                     className="underline underline-offset-4 decoration-stone-400 hover:decoration-[#1a1a1a] transition-colors"
                   >
-                    hola@federicogiobergia.com
+                    hola@fedegiobergia.com.ar
                   </a>
                 </p>
               </div>
