@@ -49,6 +49,8 @@ export default function Home() {
       </section>
 
       {/* ═══ BOOK ═══ */}
+      {/* ═══ BOOK ═══ */}
+      
       <section
         id="libro"
         className="scroll-mt-14 px-6 md:px-12 py-20 md:py-32"
