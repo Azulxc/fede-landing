@@ -99,8 +99,10 @@ export default function Home() {
                 dentro de la cotidianeidad.
             </p>
             <p className="font-serif text-[0.9375rem] italic text-stone-500 mb-8">
-              &laquo;Hay muertos que pesan más que los vivos. No por su
-              ausencia, sino por todo lo que dejaron sin decir.&raquo;
+              &laquo;Mamá ya no hablaba, papá hablaba 
+              lo justo y necesario y ya nadie prendía el televisor 
+              o la radio. A veces parecía que ellos estaban más muertos
+               por dentro que ella misma.&raquo;
             </p>
             <Link
               href="/libro"
