@@ -112,7 +112,9 @@ export default function Libro() {
                 <div className="mt-2">
                   <Link 
                     href="https://tienda.orsai.org/products/los-muertos-que-contamos" 
-                    className="text-[0.8125rem] underline underline-offset-4 decoration-stone-400 font-medium hover:decoration-[#1a1a1a] transition-colors cursor-pointer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-6 py-3 bg-[#1a1a1a] text-[#ece8e1] text-[0.75rem] uppercase tracking-[0.15em] hover:bg-[#333] transition-colors"
                   >
                     Pre-comprar &rarr;
                   </Link>
@@ -140,21 +142,7 @@ export default function Libro() {
       {/* Image grid */}
 
       {/* Newsletter */}
-      <section className="px-6 md:px-12 py-20 md:py-32">
-        <p className="text-[0.6875rem] uppercase tracking-[0.2em] text-stone-500 mb-12 md:mb-16">
-          [ Newsletter ]
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-          <h2 className="text-[clamp(2rem,4.5vw,4.5rem)] font-medium uppercase leading-[0.85] tracking-[-0.02em]">
-            No te pierdas
-            <br />
-            el lanzamiento
-          </h2>
-          <div className="flex flex-col justify-end">
-            <Newsletter />
-          </div>
-        </div>
-      </section>
+
     </>
   );
 }
